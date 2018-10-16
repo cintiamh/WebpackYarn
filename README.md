@@ -168,3 +168,19 @@ Include into scripts in `package.json`:
 ```
 "start": "webpack-dev-server --open"
 ```
+
+#### Using webpack-dev-middleware
+
+```
+$ yarn add --dev express webpack-dev-middleware
+$ touch server.js
+```
+
+In webpack.config.js, add publicPath into output:
+```javascript
+output: {
+  filename: '[name].bundle.js',
+  path: path.resolve(__dirname, 'dist'),
+  publicPath: '/'
+}
+```
