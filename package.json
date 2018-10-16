@@ -1,0 +1,17 @@
+{
+  "name": "WebpackYarn",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:cintiamh/WebpackYarn.git",
+  "author": "Cintia Higashi <cintiamh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
