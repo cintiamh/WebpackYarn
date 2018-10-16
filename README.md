@@ -1,7 +1,9 @@
 # WebpackYarn
 
-1. [Yarn](#yarn)
-2. [Webpack](#webpack)
+1. [Basics](#basics)
+2. [Yarn](#yarn)
+3. [Webpack](#webpack)
+4. [Babel](#babel)
 
 ## Basics
 
@@ -183,4 +185,28 @@ output: {
   path: path.resolve(__dirname, 'dist'),
   publicPath: '/'
 }
+```
+
+## Babel
+
+```
+$ yarn add --dev @babel/core babel-loader @babel/preset-env @babel/preset-react
+$ touch .babelrc
+```
+
+[.babelrc](.babelrc)
+
+Add loader to webpack.config.js
+```
+{
+  test: /\.js$/,
+  exclude: /node_modules/,
+  use: ['babel-loader']
+},
+```
+
+## React
+
+```
+$ yarn add --dev react react-dom
 ```
