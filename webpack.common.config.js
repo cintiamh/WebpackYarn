@@ -8,7 +8,6 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -18,7 +17,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
-      template: 'src/index.html'
+      template: './src/index.html'
     }),
   ],
   module: {
