@@ -86,7 +86,7 @@ Include in `package.json`:
 #### Loading CSS
 
 ```
-$ yarn add --dev style-loader css-loader
+$ yarn add --dev style-loader css-loader mini-css-extract-plugin
 ```
 
 From your js file, you can just import:
@@ -132,10 +132,25 @@ And use the image in CSS:
 }
 ```
 
+### Separate webpack config files
+
+```
+$ yarn add --dev webpack-merge
+$ touch webpack.common.config.js
+$ touch webpack.dev.config.js
+$ touch webpack.prod.config.js
+```
+
+* [webpack.common.config.js](webpack.common.config.js)
+* [webpack.dev.config.js](webpack.dev.config.js)
+* [webpack.prod.config.js](webpack.prod.config.js)
+
 ### Output Management
 
 ```
 $ yarn add --dev html-webpack-plugin
+$ yarn add --dev html-loader
+$ touch src/index.html
 ```
 
 #### Cleaning up the `/dist` folder
