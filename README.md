@@ -70,16 +70,21 @@ $ yarn install
 ### Install
 
 ```
-$ yarn add --dev webpack webpack-cli
-$ touch webpack.config.js
+$ yarn add --dev webpack webpack-cli webpack-merge
+$ touch webpack.common.config.js
+$ touch webpack.dev.config.js
+$ touch webpack.prod.config.js
 ```
 
-[webpack.config.js](webpack.config.js)
+* [webpack.common.config.js](webpack.common.config.js)
+* [webpack.dev.config.js](webpack.dev.config.js)
+* [webpack.prod.config.js](webpack.prod.config.js)
 
 Include in `package.json`:
 ```json
 "scripts": {
-  "start": "webpack --config webpack.config.js"
+  "build": "webpack --config webpack.prod.config.js",
+  "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline"
 }
 ```
 
@@ -132,24 +137,10 @@ And use the image in CSS:
 }
 ```
 
-### Separate webpack config files
-
-```
-$ yarn add --dev webpack-merge
-$ touch webpack.common.config.js
-$ touch webpack.dev.config.js
-$ touch webpack.prod.config.js
-```
-
-* [webpack.common.config.js](webpack.common.config.js)
-* [webpack.dev.config.js](webpack.dev.config.js)
-* [webpack.prod.config.js](webpack.prod.config.js)
-
 ### Output Management
 
 ```
-$ yarn add --dev html-webpack-plugin
-$ yarn add --dev html-loader
+$ yarn add --dev html-webpack-plugin html-loader
 $ touch src/index.html
 ```
 
@@ -160,13 +151,6 @@ $ yarn add --dev clean-webpack-plugin
 ```
 
 ### Development
-
-#### Using source maps
-
-Include into webpack.config.js:
-```
-devtool: 'inline-source-map',
-```
 
 #### Using webpack-dev-server
 
@@ -223,5 +207,5 @@ Add loader to webpack.config.js
 ## React
 
 ```
-$ yarn add --dev react react-dom
+$ yarn add react react-dom
 ```
