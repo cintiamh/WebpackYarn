@@ -221,6 +221,22 @@ package.json
 }
 ```
 
+## Jest
+
+```
+$ yarn add --dev jest
+$ yarn add --dev babel-jest regenerator-runtime
+```
+
+package.json
+```
+"scripts": {
+  "test": "jest",
+  "test-watch": "jest --watch"
+}
+```
+
+
 ## React
 
 ```
