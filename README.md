@@ -4,6 +4,7 @@
 2. [Yarn](#yarn)
 3. [Webpack](#webpack)
 4. [Babel](#babel)
+5. [ESLint](#eslint)
 
 ## Basics
 
@@ -202,6 +203,22 @@ Add loader to webpack.config.js
   exclude: /node_modules/,
   use: ['babel-loader']
 },
+```
+
+## ESLint
+
+```
+$ yarn add --dev eslint eslint-loader
+$ touch .eslintignore
+$ ./node_modules/.bin/eslint --init
+```
+[.eslintignore](.eslintignore)
+
+package.json
+```javascript
+"scripts": {
+  "lint": "eslint . --ext .js",
+}
 ```
 
 ## React
